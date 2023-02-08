@@ -1,0 +1,30 @@
+<h1>Duke Code Challenge: API</h1>
+<p>Thank you for participating in our code challenge!</p>
+<p>
+  For this challenge you will be using a mock api located here:
+  https://jsonplaceholder.typicode.com/todos/
+</p>
+<p>With this api, please do the following:</p>
+<ol>
+  <li>
+    When the user enters a number from 1-100 in the input below and clicks
+    "fetch to-do", you should use the api service to send a request to
+    https://jsonplaceholder.typicode.com/todos/[number]
+  </li>
+  <li>
+    If a response is returned, you should display the to-do's title in the
+    paragraph with the class "result".
+  </li>
+  <li>
+    If an error is returned, or if the number is out of range, you should
+    display the text "Sorry, the to-do was not found"
+  </li>
+</ol>
+
+<!--YOUR CONTENT GOES IN THE DIV BELOW -->
+<div class="scoreboard-container">
+  <input placeholder="Enter Your to-do number" [(ngModel)]="num" />
+  <button (click)="clickFetch()">FETCH TO-DO</button>
+  <!--RESULT GOES IN THE PARAGRAPH BELOW-->
+  <p class="result">Title: {{ title }}</p>
+</div>
